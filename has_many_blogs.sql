@@ -10,9 +10,6 @@ CREATE DATABASE has_many_blogs OWNER has_many_user;
 
 \c has_many_blogs;
 
-
--- \i scripts/blog_data.sql;
-
 -- create tables
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -21,9 +18,6 @@ CREATE TABLE users (
   last_name varchar(90) DEFAULT NULL,
   created_at timestamp DEFAULT now(),
   updated_at timestamp DEFAULT now()
-  -- FOREIGN KEY (postsID) REFERENCES posts(postsID),
-  -- FOREIGN KEY (commentsID) REFERENCES comments(commentsID)
-
 );
 
 CREATE TABLE posts (
@@ -46,12 +40,8 @@ CREATE TABLE comments (
 );
 
 
-
---create neccessary foreign keys
-
  \i scripts/blog_data.sql;
 
--- then load data
 
 
 
